@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean name="customer" class="com.mrbarin.spring.spring_core.map.Customer">
+    	<property name="name">
+    		<value>MrBarin</value>
+    	</property>
+    	<property name="products">
+    	<!-- LinkedHashMap as default -->
+    	<!-- if there is only one element in the list becomes an optional -->
+    		<map>
+    			<entry key="1" value="Nintendo Switch"/>
+    			<entry key="2">
+    				<value>PlayStation 5</value>
+    			</entry>
+    			<entry value="Xbox One Series X">
+    				<key>
+    					<value>3</value>
+    				</key>
+    			</entry>
+    			<entry>
+    				<key>
+    					<value>4</value>
+    				</key>
+    				<value>PC Gamer</value>
+    			</entry>
+    		</map>
+    	</property>
+    </bean>
+    
+    
+</beans>
